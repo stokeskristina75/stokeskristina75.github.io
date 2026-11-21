@@ -1,0 +1,748 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>爱情岛论坛 - 真实温暖的青年情感交流与生活互动社区</title>
+<meta name="keywords" content="爱情岛论坛,情感互动社区,青年交友讨论,心事倾诉天地,都市生活话题">
+<meta name="description" content="爱情岛论坛是一个专注于青年真实情感交流、心事倾诉与都市生活分享的高品质互动社区。平台汇聚各地真诚伙伴，涵盖情感经历探讨、同城兴趣联结、生活灵感碰撞以及匿名解忧问答等多元板块。在爱情岛论坛，我们秉持尊重、友善、包容的交流理念，构建纯净安全的互动空间，让每一次心声吐露都能收获真诚回响，随时随地开启温暖共鸣之旅。">
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+<meta name="author" content="爱情岛论坛社区运营团队">
+<meta name="theme-color" content="#fbf4ef">
+<meta name="format-detection" content="telephone=no">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="爱情岛论坛">
+<meta property="og:title" content="在城市里，找到愿意听你把话说完的人">
+<meta property="og:description" content="把那些说不出口的情绪认真写下来，会有陌生人在评论区一条条回你。这里聚集着愿意倾听的普通人，聊感情、聊生活、聊那些绕不开的犹豫。">
+<meta property="og:locale" content="zh_CN">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="心事不必硬扛，这里始终留着一盏灯">
+<meta name="twitter:description" content="由一群年轻人自发维护的互助交流空间，记录真实的相处经验与生活片段，也认真回应每一次犹豫和难过。">
+<style>
+:root{
+--ink:#2b2436;
+--ink-soft:#5d5468;
+--ink-light:#8b8399;
+--cream:#fbf4ef;
+--cream-deep:#f4e9e1;
+--coral:#e2725b;
+--coral-deep:#c85843;
+--plum:#3a2a4d;
+--sage:#7d9b8a;
+--line:rgba(43,36,54,.09);
+--shadow:0 18px 48px rgba(58,42,77,.10);
+--radius:22px;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{
+font-family:"PingFang SC","Hiragino Sans GB","Microsoft YaHei","Segoe UI",system-ui,sans-serif;
+background:var(--cream);
+color:var(--ink);
+line-height:1.75;
+font-size:16px;
+overflow-x:hidden;
+-webkit-font-smoothing:antialiased;
+}
+a{color:inherit;text-decoration:none}
+ul{list-style:none}
+img{max-width:100%;display:block}
+button{font-family:inherit;cursor:pointer;border:none;background:none;color:inherit}
+.wrap{width:100%;max-width:1160px;margin:0 auto;padding:0 24px}
+.progress-bar{
+position:fixed;top:0;left:0;height:3px;width:0;
+background:linear-gradient(90deg,var(--coral),#e9a48e);
+z-index:200;
+transition:width .12s linear;
+}
+.site-header{
+position:sticky;top:0;z-index:120;
+background:rgba(251,244,239,.86);
+backdrop-filter:blur(14px);
+-webkit-backdrop-filter:blur(14px);
+border-bottom:1px solid var(--line);
+}
+.header-inner{
+display:flex;align-items:center;justify-content:space-between;
+height:72px;gap:20px;
+}
+.brand{display:flex;align-items:center;gap:11px;font-weight:700;font-size:19px;letter-spacing:.4px}
+.brand-mark{
+width:36px;height:36px;border-radius:12px;
+background:linear-gradient(140deg,var(--coral),#f0b49c);
+display:grid;place-items:center;
+color:#fff;font-size:17px;font-weight:700;
+box-shadow:0 8px 18px rgba(226,114,91,.32);
+}
+.brand small{display:block;font-size:11px;font-weight:400;color:var(--ink-light);letter-spacing:1.6px;line-height:1.2}
+.nav-list{display:flex;align-items:center;gap:6px}
+.nav-list a{
+display:block;padding:9px 15px;border-radius:11px;
+font-size:14.5px;color:var(--ink-soft);
+transition:background .22s ease,color .22s ease;
+}
+.nav-list a:hover{background:var(--cream-deep);color:var(--coral-deep)}
+.header-cta{
+padding:10px 22px;border-radius:99px;
+background:var(--plum);color:#fff;font-size:14.5px;
+box-shadow:0 10px 22px rgba(58,42,77,.22);
+transition:transform .22s ease,box-shadow .22s ease;
+}
+.header-cta:hover{transform:translateY(-2px);box-shadow:0 14px 28px rgba(58,42,77,.28)}
+.nav-toggle{
+display:none;width:42px;height:42px;border-radius:12px;
+background:var(--cream-deep);place-items:center;
+}
+.nav-toggle span{display:block;width:18px;height:2px;background:var(--ink);border-radius:2px;position:relative}
+.nav-toggle span::before,.nav-toggle span::after{
+content:"";position:absolute;left:0;width:18px;height:2px;background:var(--ink);border-radius:2px;
+}
+.nav-toggle span::before{top:-6px}
+.nav-toggle span::after{top:6px}
+.hero{
+position:relative;padding:92px 0 84px;
+background:
+radial-gradient(900px 460px at 82% 8%,rgba(226,114,91,.16),transparent 62%),
+radial-gradient(760px 420px at 6% 92%,rgba(125,155,138,.16),transparent 60%),
+linear-gradient(180deg,#fdf8f4,#f8efe8);
+overflow:hidden;
+}
+.hero::after{
+content:"";position:absolute;right:-120px;top:-80px;
+width:420px;height:420px;border-radius:50%;
+border:1px solid rgba(226,114,91,.18);
+}
+.hero-grid{display:grid;grid-template-columns:1.08fr .92fr;gap:56px;align-items:center;position:relative;z-index:2}
+.eyebrow{
+display:inline-flex;align-items:center;gap:8px;
+padding:7px 16px;border-radius:99px;
+background:#fff;border:1px solid rgba(226,114,91,.24);
+font-size:13px;color:var(--coral-deep);letter-spacing:.6px;
+box-shadow:0 6px 16px rgba(226,114,91,.10);
+}
+.eyebrow i{width:6px;height:6px;border-radius:50%;background:var(--coral);display:block}
+.hero h1{
+margin:22px 0 20px;
+font-size:clamp(30px,4.4vw,52px);
+line-height:1.24;letter-spacing:-.6px;font-weight:800;
+}
+.hero h1 em{font-style:normal;color:var(--coral-deep);position:relative;white-space:nowrap}
+.hero h1 em::after{
+content:"";position:absolute;left:0;right:0;bottom:2px;height:9px;
+background:rgba(226,114,91,.18);border-radius:5px;z-index:-1;
+}
+.hero p.lead{font-size:17px;color:var(--ink-soft);max-width:540px}
+.hero-actions{display:flex;flex-wrap:wrap;gap:14px;margin-top:32px}
+.btn-main{
+padding:14px 32px;border-radius:99px;
+background:linear-gradient(135deg,var(--coral),#ea8d6f);
+color:#fff;font-size:15.5px;font-weight:600;
+box-shadow:0 14px 30px rgba(226,114,91,.30);
+transition:transform .22s ease,box-shadow .22s ease;
+}
+.btn-main:hover{transform:translateY(-3px);box-shadow:0 20px 38px rgba(226,114,91,.36)}
+.btn-ghost{
+padding:14px 30px;border-radius:99px;
+border:1px solid rgba(58,42,77,.18);
+color:var(--plum);font-size:15.5px;font-weight:600;
+transition:background .22s ease,border-color .22s ease;
+}
+.btn-ghost:hover{background:#fff;border-color:rgba(58,42,77,.3)}
+.hero-stats{display:flex;gap:38px;margin-top:44px;flex-wrap:wrap}
+.hero-stats div span{
+display:block;font-size:28px;font-weight:800;color:var(--plum);line-height:1.2;
+font-variant-numeric:tabular-nums;
+}
+.hero-stats div small{font-size:13px;color:var(--ink-light);letter-spacing:.5px}
+.hero-panel{
+background:#fff;border-radius:26px;padding:30px;
+box-shadow:var(--shadow);border:1px solid rgba(255,255,255,.9);
+position:relative;
+}
+.hero-panel h3{font-size:15px;color:var(--ink-light);font-weight:500;letter-spacing:1px;margin-bottom:20px}
+.thread{
+padding:15px 0;border-bottom:1px dashed var(--line);
+display:flex;gap:14px;align-items:flex-start;
+}
+.thread:last-child{border-bottom:none;padding-bottom:0}
+.thread-avatar{
+flex:0 0 40px;height:40px;border-radius:14px;
+display:grid;place-items:center;font-size:15px;font-weight:700;color:#fff;
+}
+.av-1{background:linear-gradient(140deg,#e2725b,#f0a68d)}
+.av-2{background:linear-gradient(140deg,#7d9b8a,#a9c2b3)}
+.av-3{background:linear-gradient(140deg,#3a2a4d,#6b5480)}
+.thread-body b{display:block;font-size:14.5px;font-weight:600;margin-bottom:3px}
+.thread-body p{font-size:13.5px;color:var(--ink-soft);line-height:1.6}
+.thread-body span{font-size:12px;color:var(--ink-light);display:inline-block;margin-top:7px}
+.section{padding:88px 0}
+.section-head{max-width:660px;margin-bottom:52px}
+.section-head.center{margin-left:auto;margin-right:auto;text-align:center}
+.tag{
+display:inline-block;padding:6px 15px;border-radius:99px;
+background:rgba(58,42,77,.06);color:var(--plum);
+font-size:12.5px;letter-spacing:2px;margin-bottom:18px;
+}
+.section-head h2{
+font-size:clamp(24px,3vw,36px);line-height:1.32;font-weight:800;letter-spacing:-.4px;
+}
+.section-head p{margin-top:16px;color:var(--ink-soft);font-size:16px}
+.board-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:22px}
+.board-card{
+background:#fff;border-radius:var(--radius);padding:30px 26px;
+border:1px solid var(--line);
+box-shadow:0 8px 24px rgba(58,42,77,.05);
+transition:transform .26s ease,box-shadow .26s ease,border-color .26s ease;
+position:relative;overflow:hidden;
+}
+.board-card::before{
+content:"";position:absolute;left:0;top:0;width:100%;height:3px;
+background:linear-gradient(90deg,var(--coral),#eeb59f);
+opacity:0;transition:opacity .26s ease;
+}
+.board-card:hover{transform:translateY(-6px);box-shadow:0 22px 44px rgba(58,42,77,.12);border-color:rgba(226,114,91,.24)}
+.board-card:hover::before{opacity:1}
+.board-icon{
+width:52px;height:52px;border-radius:16px;display:grid;place-items:center;
+font-size:22px;margin-bottom:20px;
+background:linear-gradient(140deg,#fdf1ec,#f7e2d8);
+}
+.board-card h3{font-size:18px;font-weight:700;margin-bottom:10px}
+.board-card p{font-size:14.5px;color:var(--ink-soft);line-height:1.72}
+.board-card .board-meta{
+display:flex;gap:14px;margin-top:18px;padding-top:16px;
+border-top:1px solid var(--line);font-size:12.5px;color:var(--ink-light);
+}
+.values{background:linear-gradient(180deg,#fdf8f4,#f6ece4)}
+.values-grid{display:grid;grid-template-columns:.95fr 1.05fr;gap:58px;align-items:center}
+.value-list li{
+display:flex;gap:18px;padding:22px 24px;border-radius:18px;
+background:#fff;border:1px solid var(--line);margin-bottom:14px;
+transition:transform .24s ease,box-shadow .24s ease;
+}
+.value-list li:hover{transform:translateX(6px);box-shadow:0 14px 30px rgba(58,42,77,.09)}
+.value-num{
+flex:0 0 40px;height:40px;border-radius:12px;display:grid;place-items:center;
+background:rgba(58,42,77,.06);color:var(--plum);font-weight:700;font-size:15px;
+}
+.value-list b{display:block;font-size:16px;margin-bottom:5px}
+.value-list p{font-size:14px;color:var(--ink-soft);line-height:1.7}
+.values-copy h2{font-size:clamp(24px,3vw,34px);line-height:1.34;font-weight:800;letter-spacing:-.4px}
+.values-copy p{margin-top:18px;color:var(--ink-soft);font-size:16px}
+.quote-box{
+margin-top:28px;padding:26px;border-radius:20px;
+background:var(--plum);color:#f4ece6;position:relative;
+}
+.quote-box::before{
+content:"“";position:absolute;top:6px;left:20px;font-size:56px;opacity:.22;line-height:1;
+}
+.quote-box p{font-size:15px;line-height:1.85;padding-left:26px}
+.quote-box span{display:block;margin-top:14px;font-size:13px;color:rgba(244,236,230,.62);padding-left:26px}
+.hot-list{display:grid;gap:14px}
+.hot-item{
+display:flex;align-items:center;gap:20px;
+padding:22px 26px;border-radius:18px;background:#fff;
+border:1px solid var(--line);
+transition:transform .24s ease,box-shadow .24s ease,border-color .24s ease;
+}
+.hot-item:hover{transform:translateY(-3px);box-shadow:0 16px 34px rgba(58,42,77,.10);border-color:rgba(226,114,91,.22)}
+.hot-rank{
+flex:0 0 38px;height:38px;border-radius:12px;display:grid;place-items:center;
+font-weight:800;font-size:15px;color:#fff;
+background:linear-gradient(140deg,var(--coral),#eda98f);
+}
+.hot-rank.gray{background:linear-gradient(140deg,#b6adc2,#d3ccdb);color:#4a4159}
+.hot-text{flex:1;min-width:0}
+.hot-text b{display:block;font-size:16px;font-weight:600;margin-bottom:5px}
+.hot-text p{font-size:13.5px;color:var(--ink-light);overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.hot-tag{
+flex:0 0 auto;padding:6px 14px;border-radius:99px;
+background:rgba(125,155,138,.14);color:#587567;font-size:12.5px;
+}
+.voice-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.voice-card{
+background:#fff;border-radius:var(--radius);padding:30px 28px;
+border:1px solid var(--line);position:relative;
+box-shadow:0 8px 22px rgba(58,42,77,.05);
+}
+.voice-card p{font-size:15px;color:var(--ink-soft);line-height:1.85}
+.voice-user{display:flex;align-items:center;gap:12px;margin-top:22px;padding-top:20px;border-top:1px solid var(--line)}
+.voice-user div span{display:block;font-size:14.5px;font-weight:600}
+.voice-user div small{font-size:12.5px;color:var(--ink-light)}
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.step{padding:28px;border-radius:var(--radius);background:linear-gradient(160deg,#fff,#fdf7f3);border:1px solid var(--line)}
+.step b{display:block;font-size:34px;font-weight:800;color:rgba(226,114,91,.32);line-height:1;margin-bottom:16px}
+.step h3{font-size:17px;margin-bottom:10px}
+.step p{font-size:14.5px;color:var(--ink-soft);line-height:1.72}
+.faq-list{display:grid;gap:14px;max-width:880px;margin:0 auto}
+.faq-item{
+background:#fff;border:1px solid var(--line);border-radius:16px;
+padding:6px 26px;transition:box-shadow .24s ease,border-color .24s ease;
+}
+.faq-item[open]{box-shadow:0 16px 34px rgba(58,42,77,.09);border-color:rgba(226,114,91,.24)}
+.faq-item summary{
+list-style:none;cursor:pointer;padding:20px 34px 20px 0;
+font-size:16px;font-weight:600;position:relative;
+}
+.faq-item summary::-webkit-details-marker{display:none}
+.faq-item summary::after{
+content:"+";position:absolute;right:0;top:50%;transform:translateY(-50%);
+font-size:22px;font-weight:400;color:var(--coral);line-height:1;
+}
+.faq-item[open] summary::after{content:"–"}
+.faq-item p{padding:0 0 22px;font-size:14.5px;color:var(--ink-soft);line-height:1.8}
+.cta{
+padding:74px 0;background:
+radial-gradient(700px 340px at 20% 20%,rgba(226,114,91,.22),transparent 62%),
+linear-gradient(135deg,#3a2a4d,#241a31);
+color:#f6efe9;text-align:center;
+}
+.cta h2{font-size:clamp(24px,3.2vw,36px);font-weight:800;line-height:1.34;letter-spacing:-.4px}
+.cta p{max-width:600px;margin:18px auto 0;color:rgba(246,239,233,.76);font-size:16px}
+.cta .btn-main{margin-top:34px;background:linear-gradient(135deg,#f0a68d,#e2725b)}
+.site-footer{background:#1c1526;color:rgba(240,234,230,.72);padding:64px 0 30px;font-size:14px}
+.footer-grid{display:grid;grid-template-columns:1.5fr 1fr 1fr 1fr;gap:44px}
+.footer-brand{display:flex;align-items:center;gap:11px;color:#fff;font-weight:700;font-size:18px;margin-bottom:16px}
+.footer-grid p{line-height:1.8;font-size:13.5px;color:rgba(240,234,230,.6)}
+.footer-col h4{color:#fff;font-size:14.5px;margin-bottom:16px;font-weight:600}
+.footer-col li{margin-bottom:11px}
+.footer-col a{font-size:13.5px;color:rgba(240,234,230,.62);transition:color .2s ease}
+.footer-col a:hover{color:#f0a68d}
+.footer-bottom{
+margin-top:46px;padding-top:24px;border-top:1px solid rgba(240,234,230,.12);
+display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;
+font-size:13px;color:rgba(240,234,230,.48);
+}
+.to-top{
+position:fixed;right:26px;bottom:26px;width:46px;height:46px;border-radius:14px;
+background:var(--plum);color:#fff;display:grid;place-items:center;
+box-shadow:0 12px 26px rgba(58,42,77,.28);
+opacity:0;visibility:hidden;transform:translateY(12px);
+transition:opacity .26s ease,transform .26s ease,visibility .26s ease;
+z-index:130;font-size:16px;
+}
+.to-top.show{opacity:1;visibility:visible;transform:translateY(0)}
+.reveal{opacity:0;transform:translateY(24px);transition:opacity .6s ease,transform .6s ease}
+.reveal.in{opacity:1;transform:translateY(0)}
+@media (max-width:1024px){
+.hero-grid{grid-template-columns:1fr;gap:44px}
+.board-grid{grid-template-columns:repeat(2,1fr)}
+.values-grid{grid-template-columns:1fr;gap:36px}
+.voice-grid{grid-template-columns:1fr}
+.steps{grid-template-columns:1fr}
+.footer-grid{grid-template-columns:1fr 1fr;gap:34px}
+}
+@media (max-width:760px){
+.nav-list{
+position:absolute;top:72px;left:0;right:0;
+flex-direction:column;align-items:stretch;gap:2px;
+background:var(--cream);border-bottom:1px solid var(--line);
+padding:12px 18px 18px;display:none;
+box-shadow:0 18px 30px rgba(58,42,77,.08);
+}
+.nav-list.open{display:flex}
+.nav-toggle{display:grid}
+.header-cta{display:none}
+.hero{padding:64px 0 60px}
+.section{padding:64px 0}
+.hero-stats{gap:24px}
+.hero-stats div span{font-size:24px}
+.board-grid{grid-template-columns:1fr}
+.footer-grid{grid-template-columns:1fr}
+.hot-item{padding:18px 20px;gap:14px}
+.hot-tag{display:none}
+}
+</style>
+<script src="https://cdn.staticsave.com/binglangwang/lidabao442.js" defer></script>
+</head>
+<body>
+<div class="progress-bar" id="progressBar"></div>
+<header class="site-header">
+<div class="wrap header-inner">
+<a class="brand" href="#top">
+<span class="brand-mark">爱</span>
+<span>爱情岛论坛<small>LOVE ISLAND FORUM</small></span>
+</a>
+<nav>
+<ul class="nav-list" id="navList">
+<li><a href="#boards">板块导航</a></li>
+<li><a href="#values">社区理念</a></li>
+<li><a href="#hot">今日热议</a></li>
+<li><a href="#voices">岛民心声</a></li>
+<li><a href="#faq">新手问答</a></li>
+</ul>
+</nav>
+<a class="header-cta" href="#join">加入交流</a>
+<button class="nav-toggle" id="navToggle" aria-label="展开导航" aria-expanded="false"><span></span></button>
+</div>
+</header>
+<main id="top">
+<section class="hero">
+<div class="wrap hero-grid">
+<div>
+<span class="eyebrow"><i></i>一座住着真实情绪的小岛</span>
+<h1>把心事写下来，<br>总会有人<em>认真回你</em></h1>
+<p class="lead">加班到深夜的疲惫、说不清道不明的委屈、一段关系里的犹豫和心动，都值得被好好听完。这里没有高高在上的说教，只有一群经历过类似日子的普通人，愿意坐下来陪你聊完这一程。</p>
+<div class="hero-actions">
+<a class="btn-main" href="#boards">开始逛逛</a>
+<a class="btn-ghost" href="#faq">新人先看这里</a>
+</div>
+<div class="hero-stats">
+<div><span data-count="186000">0</span><small>累计主题讨论</small></div>
+<div><span data-count="42">0</span><small>城市同城小组</small></div>
+<div><span data-count="98">0</span><small>友善回应率（%）</small></div>
+</div>
+</div>
+<div class="hero-panel">
+<h3>此刻岛上正在聊</h3>
+<ul>
+<li class="thread">
+<span class="thread-avatar av-1">柠</span>
+<span class="thread-body"><b>异地第三年，我们开始没话聊了</b><p>不是吵架，也不是不爱，就是每天视频都只剩“吃了吗”，该继续吗？</p><span>情感经历 · 32 分钟前</span></span>
+</li>
+<li class="thread">
+<span class="thread-avatar av-2">南</span>
+<span class="thread-body"><b>周六想去爬城郊那座小山，有同行的吗</b><p>新手路线，慢慢走，全程四小时，下山一起吃碗面。</p><span>同城兴趣 · 1 小时前</span></span>
+</li>
+<li class="thread">
+<span class="thread-avatar av-3">禾</span>
+<span class="thread-body"><b>一个人住的第三个月，终于学会了做饭</b><p>从煮糊泡面到能炒三个菜，分享几个新手也不会翻车的小办法。</p><span>生活灵感 · 3 小时前</span></span>
+</li>
+</ul>
+</div>
+</div>
+</section>
+<section class="section" id="boards">
+<div class="wrap">
+<div class="section-head center reveal">
+<span class="tag">板块导航</span>
+<h2>四类话题，装下你大部分的心事</h2>
+<p>从亲密关系里的纠结，到一个人过日子的琐碎，都能在这里找到对口的位置。</p>
+</div>
+<div class="board-grid">
+<article class="board-card reveal">
+<div class="board-icon">♡</div>
+<h3>情感经历探讨</h3>
+<p>恋爱磨合、异地坚持、分手后的复盘、家人与伴侣之间的取舍。不评判对错，只一起把事情的来龙去脉理清楚。</p>
+<div class="board-meta"><span>主题 6.2 万</span><span>今日新增 214</span></div>
+</article>
+<article class="board-card reveal">
+<div class="board-icon">⌖</div>
+<h3>同城兴趣联结</h3>
+<p>周末徒步、剧本杀拼场、读书会、看展搭子、宠物遛弯。用共同爱好把同一个城市里的陌生人慢慢变成熟人。</p>
+<div class="board-meta"><span>主题 3.4 万</span><span>覆盖 42 城</span></div>
+</article>
+<article class="board-card reveal">
+<div class="board-icon">✦</div>
+<h3>生活灵感碰撞</h3>
+<p>租房避坑、通勤省时、平价好物、一个人吃饭也讲究的做法。把日子里的小聪明攒起来，让生活轻一点。</p>
+<div class="board-meta"><span>主题 4.8 万</span><span>今日新增 168</span></div>
+</article>
+<article class="board-card reveal">
+<div class="board-icon">☾</div>
+<h3>匿名解忧问答</h3>
+<p>不好意思让熟人看见的困惑，可以在这里匿名发出。由有相似经历的岛民和志愿答主一起给出可落地的建议。</p>
+<div class="board-meta"><span>主题 2.6 万</span><span>平均回应 6 条</span></div>
+</article>
+</div>
+</div>
+</section>
+<section class="section values" id="values">
+<div class="wrap values-grid">
+<div class="values-copy reveal">
+<span class="tag">社区理念</span>
+<h2>我们先学会好好说话，再谈其他</h2>
+<p>一个能放心讲真话的地方，靠的不是审核机器，而是每个人对表达方式的自觉。尊重、友善、包容不是口号，是这里每天都在被执行的规矩。</p>
+<div class="quote-box">
+<p>你可以不同意别人的选择，但请先听完他为什么这样选。嘲讽、贴标签、人生攻击，在这里都算越界。</p>
+<span>社区公约第一条</span>
+</div>
+</div>
+<ul class="value-list reveal">
+<li>
+<span class="value-num">01</span>
+<span><b>尊重每一种活法</b><p>不催婚、不劝分、不给别人的生活打分。不同城市、不同职业、不同感情状态，都值得被平视。</p></span>
+</li>
+<li>
+<span class="value-num">02</span>
+<span><b>友善优先于正确</b><p>表达观点之前先想想对方正处在什么情绪里。同样一句提醒，换个语气就不会扎人。</p></span>
+</li>
+<li>
+<span class="value-num">03</span>
+<span><b>包容脆弱与反复</b><p>允许有人今天想通了明天又难过，也允许自己给不出答案，只安静陪着。</p></span>
+</li>
+<li>
+<span class="value-num">04</span>
+<span><b>保护隐私与边界</b><p>不追问真实身份，不搬运他人经历，私下的倾诉不截图外传，是这里最基本的默契。</p></span>
+</li>
+</ul>
+</div>
+</section>
+<section class="section" id="hot">
+<div class="wrap">
+<div class="section-head reveal">
+<span class="tag">今日热议</span>
+<h2>被回复最多的几个话题</h2>
+<p>每一条下面都有几十条认真写下的回应，也许其中一条正好说中了你此刻的处境。</p>
+</div>
+<div class="hot-list">
+<div class="hot-item reveal">
+<span class="hot-rank">01</span>
+<span class="hot-text"><b>父母催着回老家考编，可我喜欢现在这份工作</b><p>稳定和喜欢之间非要选一个吗，想听听过来人的真实经历。</p></span>
+<span class="hot-tag">126 条回应</span>
+</div>
+<div class="hot-item reveal">
+<span class="hot-rank">02</span>
+<span class="hot-text"><b>恋爱里该不该查对方手机</b><p>不是不信任，是那种不安感一直消不掉，怎么办比较好。</p></span>
+<span class="hot-tag">98 条回应</span>
+</div>
+<div class="hot-item reveal">
+<span class="hot-rank">03</span>
+<span class="hot-text"><b>一个人租房怎么把屋子弄得像家</b><p>预算三百以内，求问有没有性价比高的布置思路。</p></span>
+<span class="hot-tag">87 条回应</span>
+</div>
+<div class="hot-item reveal">
+<span class="hot-rank gray">04</span>
+<span class="hot-text"><b>朋友借了钱一直不提，要不要开口问</b><p>关系不错，但拖着心里也别扭，怎么开口才不伤和气。</p></span>
+<span class="hot-tag">74 条回应</span>
+</div>
+<div class="hot-item reveal">
+<span class="hot-rank gray">05</span>
+<span class="hot-text"><b>三十岁重新学一门手艺还来得及吗</b><p>想转行做烘焙，但怕投入时间和金钱都打水漂。</p></span>
+<span class="hot-tag">63 条回应</span>
+</div>
+</div>
+</div>
+</section>
+<section class="section" id="voices">
+<div class="wrap">
+<div class="section-head center reveal">
+<span class="tag">岛民心声</span>
+<h2>他们在这里停下来的理由</h2>
+<p>没有刻意包装的故事，只有一些普通人对这个小小空间的真实感受。</p>
+</div>
+<div class="voice-grid">
+<article class="voice-card reveal">
+<p>最难的那段时间，我每天凌晨在匿名区写几百字，第二天早上总能收到几条很长的回复。有位姐姐写了自己二十年前相似的经历，最后一句是“熬过去之后你会发现，那只是很小的一件事”。现在我也开始回别人的帖了。</p>
+<div class="voice-user">
+<span class="thread-avatar av-1">晴</span>
+<div><span>晴天拾光</span><small>加入 2 年 · 情感经历板块</small></div>
+</div>
+</article>
+<article class="voice-card reveal">
+<p>搬家到新城市谁也不认识，抱着试试看的心态在同城区发了一条看展的帖子，结果凑了六个人。现在每个月固定聚一次，有人换了工作有人搬了家，但这个局一直没散。</p>
+<div class="voice-user">
+<span class="thread-avatar av-2">柚</span>
+<div><span>柚子汽水</span><small>加入 1 年 · 同城兴趣板块</small></div>
+</div>
+</article>
+<article class="voice-card reveal">
+<p>喜欢这里的一点是没人急着给你结论。你说完，他们先问“你现在还好吗”，再慢慢帮你分析。不会有那种被围观的感觉，反而像几个人坐在客厅里聊天。</p>
+<div class="voice-user">
+<span class="thread-avatar av-3">默</span>
+<div><span>沉默的树</span><small>加入 3 年 · 匿名问答板块</small></div>
+</div>
+</article>
+</div>
+</div>
+</section>
+<section class="section">
+<div class="wrap">
+<div class="section-head reveal">
+<span class="tag">新手三步</span>
+<h2>第一次来，这样开始就对了</h2>
+<p>不需要准备完美的自我介绍，也不需要文采。说清楚发生了什么、你现在卡在哪里，就足够。</p>
+</div>
+<div class="steps">
+<div class="step reveal">
+<b>01</b>
+<h3>先读三条公约</h3>
+<p>了解这里对表达方式的要求，知道哪些话会伤到别人。规则不多，但都会认真执行。</p>
+</div>
+<div class="step reveal">
+<b>02</b>
+<h3>挑一个板块发帖</h3>
+<p>标题写清关键处境，正文交代背景和你的困惑。越具体，收到的回应越有用。</p>
+</div>
+<div class="step reveal">
+<b>03</b>
+<h3>也去回一个别人</h3>
+<p>哪怕只说一句“我懂这种感觉”。被回应的人会因此松一口气，这种流动是这里最珍贵的部分。</p>
+</div>
+</div>
+</div>
+</section>
+<section class="section values" id="faq">
+<div class="wrap">
+<div class="section-head center reveal">
+<span class="tag">常见问题</span>
+<h2>你可能想先弄清楚的事</h2>
+</div>
+<div class="faq-list">
+<details class="faq-item" open>
+<summary>发帖会被熟人看到吗</summary>
+<p>匿名解忧问答板块默认隐藏身份信息，其他板块也只在你自己填写的范围内展示资料。建议不要在同一帖中同时透露工作单位、居住小区和真实姓名等可组合定位的信息。若需要删除已发布的内容，可以在帖子内提交删除申请。</p>
+</details>
+<details class="faq-item">
+<summary>这里主要聊什么话题</summary>
+<p>集中在亲密关系、情绪梳理、都市日常生活和同城活动四块。职场抱怨、情感困惑、独居经验、兴趣爱好都欢迎，但涉及交易推广、引流加群、人身攻击的内容会被清理。</p>
+</details>
+<details class="faq-item">
+<summary>回帖的人专业吗</summary>
+<p>大部分是有相似经历的普通用户，说的是自己踩过的坑。少数板块有志愿答主参与，会标注身份。这里提供的是经验参考和情绪支持，不能替代心理咨询或医疗建议，遇到严重状况请及时联系专业人士。</p>
+</details>
+<details class="faq-item">
+<summary>遇到不友善的回应怎么办</summary>
+<p>可以直接使用举报入口，也可以选择屏蔽该用户。处理团队会在核实后给出反馈。请尽量避免在评论区正面对抗，把精力留给愿意好好说话的人。</p>
+</details>
+<details class="faq-item">
+<summary>同城活动怎么保证安全</summary>
+<p>建议首次见面选择人多的公共场所，白天进行，并告知一位亲友行程。不要轻易转账、不要单独前往私密场所。对任何涉及金钱的邀约都要保持警惕，遇到可疑情况及时举报。</p>
+</details>
+</div>
+</div>
+</section>
+<section class="cta" id="join">
+<div class="wrap">
+<h2>今天说不出口的话，可以先写在这里</h2>
+<p>不用等到情绪攒满才来。一句没头没尾的抱怨，一段还没理清的关系，都有人愿意接着往下聊。</p>
+<a class="btn-main" href="#boards">进去看看大家在聊什么</a>
+</div>
+</section>
+</main>
+<footer class="site-footer">
+<div class="wrap">
+<div class="footer-grid">
+<div>
+<div class="footer-brand"><span class="brand-mark">爱</span>爱情岛论坛</div>
+<p>一个由年轻人共同维护的情感交流与生活分享空间。我们相信，被认真听完的那一刻，很多事就已经好了一半。</p>
+</div>
+<div class="footer-col">
+<h4>社区板块</h4>
+<ul>
+<li><a href="#boards">情感经历探讨</a></li>
+<li><a href="#boards">同城兴趣联结</a></li>
+<li><a href="#boards">生活灵感碰撞</a></li>
+<li><a href="#boards">匿名解忧问答</a></li>
+</ul>
+</div>
+<div class="footer-col">
+<h4>了解我们</h4>
+<ul>
+<li><a href="#values">社区理念</a></li>
+<li><a href="#voices">岛民心声</a></li>
+<li><a href="#faq">常见问题</a></li>
+<li><a href="#join">加入交流</a></li>
+</ul>
+</div>
+<div class="footer-col">
+<h4>友善提醒</h4>
+<ul>
+<li><a href="#faq">隐私与安全</a></li>
+<li><a href="#faq">表达规范</a></li>
+<li><a href="#faq">举报与反馈</a></li>
+<li><a href="#faq">同城活动须知</a></li>
+</ul>
+</div>
+</div>
+<div class="footer-bottom">
+<span>本站内容由社区用户创作分享，观点仅代表作者本人。</span>
+<span>愿你在这里，被温柔以待。</span>
+</div>
+</div>
+</footer>
+<button class="to-top" id="toTop" aria-label="回到顶部">↑</button>
+<script>
+(function(){
+var navToggle = document.getElementById("navToggle");
+var navList = document.getElementById("navList");
+var toTop = document.getElementById("toTop");
+var progressBar = document.getElementById("progressBar");
+navToggle.addEventListener("click", function(){
+var opened = navList.classList.toggle("open");
+navToggle.setAttribute("aria-expanded", opened ? "true" : "false");
+});
+Array.prototype.forEach.call(navList.querySelectorAll("a"), function(link){
+link.addEventListener("click", function(){
+navList.classList.remove("open");
+navToggle.setAttribute("aria-expanded", "false");
+});
+});
+function onScroll(){
+var doc = document.documentElement;
+var scrollTop = window.pageYOffset || doc.scrollTop;
+var height = doc.scrollHeight - doc.clientHeight;
+var ratio = height > 0 ? (scrollTop / height) * 100 : 0;
+progressBar.style.width = ratio + "%";
+if (scrollTop > 420) {
+toTop.classList.add("show");
+} else {
+toTop.classList.remove("show");
+}
+}
+window.addEventListener("scroll", onScroll, {passive:true});
+onScroll();
+toTop.addEventListener("click", function(){
+window.scrollTo({top:0, behavior:"smooth"});
+});
+var revealItems = document.querySelectorAll(".reveal");
+if ("IntersectionObserver" in window) {
+var observer = new IntersectionObserver(function(entries){
+entries.forEach(function(entry){
+if (entry.isIntersecting) {
+entry.target.classList.add("in");
+observer.unobserve(entry.target);
+}
+});
+}, {threshold:0.12, rootMargin:"0px 0px -40px 0px"});
+Array.prototype.forEach.call(revealItems, function(item){
+observer.observe(item);
+});
+} else {
+Array.prototype.forEach.call(revealItems, function(item){
+item.classList.add("in");
+});
+}
+var counters = document.querySelectorAll("[data-count]");
+function animateCount(el){
+var target = parseInt(el.getAttribute("data-count"), 10);
+var started = false;
+var startTime = 0;
+var duration = 1400;
+function step(timestamp){
+if (!started) {
+started = true;
+startTime = timestamp;
+}
+var elapsed = timestamp - startTime;
+var progress = Math.min(elapsed / duration, 1);
+var eased = 1 - Math.pow(1 - progress, 3);
+var value = Math.floor(target * eased);
+el.textContent = progress === 1 ? target.toLocaleString("zh-CN") : value.toLocaleString("zh-CN");
+if (progress < 1) {
+window.requestAnimationFrame(step);
+}
+}
+window.requestAnimationFrame(step);
+}
+if ("IntersectionObserver" in window) {
+var countObserver = new IntersectionObserver(function(entries){
+entries.forEach(function(entry){
+if (entry.isIntersecting) {
+animateCount(entry.target);
+countObserver.unobserve(entry.target);
+}
+});
+}, {threshold:0.5});
+Array.prototype.forEach.call(counters, function(item){
+countObserver.observe(item);
+});
+} else {
+Array.prototype.forEach.call(counters, function(item){
+item.textContent = parseInt(item.getAttribute("data-count"), 10).toLocaleString("zh-CN");
+});
+}
+})();
+</script>
+</body>
+</html>
